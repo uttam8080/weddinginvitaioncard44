@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .font-script {
+    font-family: 'Great Vibes', 'Alex Brush', cursive;
+  }
+  .font-serif-display {
+    font-family: 'Cormorant Garamond', 'Playfair Display', serif;
+  }
+  .font-serif-body {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+  .font-sans-body {
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  }
+}
+
+/* Custom shimmer and gold foil effect */
+.gold-foil-text {
+  background: linear-gradient(135deg, #a38148 0%, #d4af37 25%, #f3e5ab 50%, #d4af37 75%, #8a6a2d 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gold-foil-border {
+  border-image: linear-gradient(135deg, #c5a059, #f7e7ce, #c5a059, #8c6a27) 1;
+}
+
+.sage-gradient-bg {
+  background: linear-gradient(180deg, #f4f6f0 0%, #e8eee3 50%, #dbe4d5 100%);
+}
+
+.paper-shadow {
+  box-shadow: 0 20px 40px -15px rgba(50, 45, 35, 0.08), 0 0 1px 1px rgba(180, 165, 145, 0.2);
+}
+
+.card-inner-border {
+  box-shadow: inset 0 0 0 1px rgba(197, 160, 89, 0.4), inset 0 0 0 6px rgba(255, 255, 255, 0.8), inset 0 0 0 7px rgba(197, 160, 89, 0.3);
+}
+
+@keyframes floatSoft {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+.animate-float-soft {
+  animation: floatSoft 4s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 3s ease-in-out infinite;
+}
+

@@ -1,0 +1,6 @@
+{
+  "name": "Emma & James Wedding",
+  "description": "An elegant interactive wedding invitation and celebration website for Emma & James in Napa Valley.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
