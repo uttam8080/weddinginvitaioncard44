@@ -7,9 +7,9 @@ import React, { useState } from 'react';
 import { HeroSection } from './components/HeroSection';
 import { ScratchRevealSection } from './components/ScratchRevealSection';
 import { InvitationCardSection } from './components/InvitationCardSection';
-import { LoveStorySection } from './components/LoveStorySection';
-import { WeddingEventsSection } from './components/WeddingEventsSection';
-import { GallerySection } from './components/GallerySection';
+import { CountdownSection } from './components/CountdownSection';
+import { ScheduleSection } from './components/ScheduleSection';
+import { TravelStaySection } from './components/TravelStaySection';
 import { FooterSection } from './components/FooterSection';
 import { LocationModal } from './components/LocationModal';
 import { CurvedSectionDivider } from './components/CurvedSectionDivider';
@@ -24,11 +24,12 @@ export default function App() {
         {/* Section 1: Hero Section */}
         <HeroSection />
 
-        {/* CURVED DIVIDER 1: Hero (#627254) -> ScratchReveal (#f7f3ea) */}
+        {/* CURVED DIVIDER 1: Hero (Image) -> ScratchReveal (#f7f3ea) */}
         <CurvedSectionDivider
           variant="curve"
           fillColor="#f7f3ea"
-          bgColor="#627254"
+          bgColor="transparent"
+          className="-mt-12 sm:-mt-16 lg:-mt-20 relative z-20"
         />
 
         {/* Section 2: Wedding Scratch / Reveal Section */}
@@ -44,49 +45,48 @@ export default function App() {
         {/* Section 3: Invitation Card Section */}
         <InvitationCardSection />
 
-        {/* CURVED DIVIDER 3: InvitationCard (#627254) -> LoveStory (#f7f3ea) */}
+        {/* CURVED DIVIDER 3: InvitationCard (#627254) -> Countdown (#f7f3ea) */}
         <CurvedSectionDivider
           variant="curve"
           fillColor="#f7f3ea"
           bgColor="#627254"
         />
 
-        {/* Section 4: Our Love Story */}
-        <LoveStorySection />
+        {/* Section 4: Countdown Section (Hanging Tag Cards style) */}
+        <CountdownSection />
 
-        {/* CURVED DIVIDER 4: LoveStory (#f7f3ea) -> WeddingEvents (#627254) */}
+        {/* CURVED DIVIDER 4: Countdown (#f4efea) -> Secret Gallery (#f7f3ea) */}
         <CurvedSectionDivider
           variant="curve"
-          fillColor="#627254"
+          fillColor="#f7f3ea"
+          bgColor="#f4efea"
+        />
+
+        {/* Section 6: Secret Gallery Archive */}
+        <ScheduleSection />
+
+        {/* CURVED DIVIDER 6: Secret Gallery (#f7f3ea) -> Travel & Stay (#4a0213) */}
+        <CurvedSectionDivider
+          variant="curve"
+          fillColor="#4a0213"
           bgColor="#f7f3ea"
         />
 
-        {/* Section 5: Wedding Events */}
-        <WeddingEventsSection onOpenLocation={() => setIsLocationOpen(true)} />
+        {/* Section 7: Travel & Stay */}
+        <TravelStaySection />
 
-        {/* CURVED DIVIDER 5: WeddingEvents (#627254) -> Gallery (#f7f3ea) */}
-        <CurvedSectionDivider
-          variant="curve"
-          fillColor="#f7f3ea"
-          bgColor="#627254"
-        />
-
-        {/* Section 6: Bride & Groom Image Collection */}
-        <GallerySection />
-
-        {/* CURVED DIVIDER 6: Gallery (#f7f3ea) -> Footer (#2c3527) */}
+        {/* CURVED DIVIDER 7: Travel (#4a0213) -> Footer (#2c3527) */}
         <CurvedSectionDivider
           variant="curve"
           fillColor="#2c3527"
-          bgColor="#f7f3ea"
+          bgColor="#4a0213"
         />
 
-        {/* Section 7: Footer Section */}
+        {/* Section 11: Footer Section */}
         <FooterSection />
       </main>
 
       {/* Interactive Modals */}
-
       <LocationModal
         isOpen={isLocationOpen}
         onClose={() => setIsLocationOpen(false)}
@@ -94,5 +94,3 @@ export default function App() {
     </div>
   );
 }
-
-

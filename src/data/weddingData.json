@@ -1,0 +1,282 @@
+{
+  "HERO_DATA": {
+    "subtitleTop": "Together with their families",
+    "names": "Emma & James",
+    "groomAndBrideFull": "Emma Rose Carter & James Alexander Wilson",
+    "subtitleBottom": "invite you to celebrate their wedding",
+    "dateFormatted": "Saturday, September 19, 2026",
+    "dateISO": "2026-09-19",
+    "locationName": "The Willow Garden Estate",
+    "locationRegion": "Napa Valley, California",
+    "tagline": "Two hearts. One love. One beautiful beginning.",
+    "buttonText": "Discover Our Story ↓"
+  },
+  "SCRATCH_REVEAL_DATA": {
+    "sectionTag": "Interactive Save The Date",
+    "heading": "Scratch To Reveal Our Details",
+    "items": [
+      {
+        "id": "date",
+        "label": "Save The Date",
+        "mainText": "19 · 09 · 2026",
+        "subText": "Napa Valley, CA",
+        "foilLabel": "✨ SCRATCH DATE ✨",
+        "mainClass": "font-script text-3xl sm:text-4xl text-[#3d3226] py-0.5 leading-none"
+      },
+      {
+        "id": "venue",
+        "label": "The Venue",
+        "mainText": "Willow Garden",
+        "subText": "Napa Valley Estate",
+        "foilLabel": "✨ SCRATCH VENUE ✨",
+        "mainClass": "font-serif-display text-lg sm:text-xl text-[#3d3226] py-0.5 font-medium leading-tight"
+      },
+      {
+        "id": "dress",
+        "label": "Dress Code",
+        "mainText": "Black Tie Optional",
+        "subText": "Formal & Elegant",
+        "foilLabel": "✨ SCRATCH VIBE ✨",
+        "mainClass": "font-serif-display text-base sm:text-lg text-[#3d3226] py-0.5 font-medium leading-tight"
+      }
+    ]
+  },
+  "COUNTDOWN_DATA": {
+    "sectionTitle": "Counting Down to Forever",
+    "subtitle": "Our biggest adventure begins soon.",
+    "targetDate": "2026-09-19T16:00:00",
+    "bottomText": "We are excited to celebrate this unforgettable day with our family and friends."
+  },
+  "INVITATION_DATA": {
+    "heading": "Together with their families",
+    "brideName": "Emma Rose Carter",
+    "groomName": "James Alexander Wilson",
+    "invitationBody": "request the pleasure of your company as they exchange vows and begin their journey together.",
+    "dateText": "Saturday, the nineteenth of September",
+    "yearText": "Two Thousand Twenty-Six",
+    "timeText": "at four o'clock in the afternoon",
+    "venue": "The Willow Garden Estate",
+    "location": "Napa Valley, California",
+    "note": "Dinner, dancing & celebration to follow.",
+    "buttonText": "View Invitation"
+  },
+  "LOVE_STORY_DATA": {
+    "title": "Our Love Story",
+    "mainHeading": "Every love story is beautiful, but ours is our favorite.",
+    "paragraphs": [
+      "Some love stories begin with a grand adventure. Ours began with something much simpler—a hello.",
+      "From our very first conversation to countless late-night talks, weekend adventures, and little moments that became unforgettable memories, our story slowly became something beautiful.",
+      "Through every laugh, every challenge, and every dream we shared, we discovered that life was better together.",
+      "And now, after all the moments that brought us here, we're ready to begin our greatest adventure yet."
+    ],
+    "quote": "Our forever starts here.",
+    "timeline": [
+      {
+        "year": "2019",
+        "title": "❤️ The First Meeting",
+        "description": "It all began with a chance meeting that quickly turned into hours of conversation and countless shared smiles.",
+        "image": "https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "year": "2020",
+        "title": "☕ First Date",
+        "description": "A simple dinner turned into an unforgettable evening filled with laughter and meaningful conversations.",
+        "image": "https://images.unsplash.com/photo-1469371670807-013ccf25f16a?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "year": "2022",
+        "title": "✈ Adventures Together",
+        "description": "From our first vacation to favorite memories and special milestones, we discovered that life was better together.",
+        "image": "https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "year": "2024",
+        "title": "💍 The Proposal",
+        "description": "Surrounded by nature and a breathtaking sunset, one heartfelt question changed our lives forever.",
+        "image": "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "year": "2026",
+        "title": "❤️ Today",
+        "description": "Every step of our journey has led us to this beautiful day, and we can't wait to celebrate it with the people we love most.",
+        "image": "https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=800&q=80"
+      }
+    ]
+  },
+  "EVENTS_DATA": {
+    "title": "Wedding Celebration",
+    "heading": "The Celebration",
+    "subtitle": "Join us as we celebrate each beautiful moment together.",
+    "buttonText": "View Location",
+    "events": [
+      {
+        "id": "ceremony",
+        "icon": "💍",
+        "title": "The Ceremony",
+        "time": "4:00 PM",
+        "location": "St. Mary's Church / The Willow Garden Estate",
+        "description": "Our wedding ceremony where we exchange our vows.",
+        "dressCode": "Formal / Black Tie Optional"
+      },
+      {
+        "id": "cocktails",
+        "icon": "🥂",
+        "title": "The Cocktail Hour",
+        "time": "5:30 PM",
+        "location": "Garden Courtyard",
+        "description": "Enjoy drinks, light refreshments, and conversations."
+      },
+      {
+        "id": "reception",
+        "icon": "🍽️",
+        "title": "The Reception",
+        "time": "7:00 PM",
+        "location": "Grand Ballroom",
+        "description": "Dinner, speeches, dancing, and celebration."
+      },
+      {
+        "id": "afterparty",
+        "icon": "🌙",
+        "title": "The After Party (Optional)",
+        "time": "10:30 PM",
+        "location": "Sky Lounge",
+        "description": "Continue the celebration with music and dancing."
+      }
+    ],
+    "dressCodeSwatches": [
+      { "name": "Sage Green", "color": "#8a9a86" },
+      { "name": "Eucalyptus", "color": "#6b7c69" },
+      { "name": "Warm Taupe", "color": "#a89988" },
+      { "name": "Soft Champagne", "color": "#e3d4c1" },
+      { "name": "Blush Rose", "color": "#ebd2c8" },
+      { "name": "Dusty Gold", "color": "#c5a059" }
+    ]
+  },
+  "DRESS_CODE_DATA": {
+    "sectionTitle": "Dress Code",
+    "subtitle": "Help us create a beautiful celebration by following our dress code.",
+    "theme": "Elegant Formal Attire",
+    "gentlemen": [
+      "Black Suit",
+      "Navy Suit",
+      "Dark Grey Suit",
+      "White Dress Shirt",
+      "Tie or Bow Tie",
+      "Formal Shoes"
+    ],
+    "ladies": [
+      "Evening Gown",
+      "Cocktail Dress",
+      "Midi Dress",
+      "Elegant Heels or Dress Shoes"
+    ],
+    "preferredColors": [
+      { "name": "Champagne", "color": "#F7E7CE" },
+      { "name": "Beige", "color": "#F5F5DC" },
+      { "name": "Ivory", "color": "#FFFFF0" },
+      { "name": "Sage Green", "color": "#A3B18A" },
+      { "name": "Dusty Rose", "color": "#DCAE96" },
+      { "name": "Terracotta", "color": "#C96C4A" },
+      { "name": "Olive Green", "color": "#6B7C69" },
+      { "name": "Brown", "color": "#4B3832" },
+      { "name": "Nude", "color": "#E3D4C1" },
+      { "name": "Soft Grey", "color": "#D3D3D3" }
+    ],
+    "avoidColors": [
+      "Pure White",
+      "Neon Colors",
+      "Bright Red",
+      "Casual Clothing",
+      "Flip-Flops"
+    ]
+  },
+  "GALLERY_DATA": {
+    "sectionTitle": "Our Memories",
+    "heading": "Our Memories",
+    "subtitle": "A collection of moments that tell our story.",
+    "sectionDescription": "Every photograph tells a story, capturing the love, laughter, and memories that have shaped our journey together.",
+    "categories": [
+      "Engagement Shoot",
+      "Proposal",
+      "Travels Together",
+      "Date Nights",
+      "Family Moments",
+      "Pre-Wedding Photoshoot"
+    ],
+    "images": [
+      {
+        "id": "g1",
+        "url": "https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1200&q=80",
+        "caption": "The beginning of forever.",
+        "alt": "Emma and James standing together under golden sunlight",
+        "category": "Engagement Shoot"
+      },
+      {
+        "id": "g2",
+        "url": "https://images.unsplash.com/photo-1532712938310-34cb3982ef74?auto=format&fit=crop&w=1200&q=80",
+        "caption": "Adventures are better together.",
+        "alt": "Emma and James laughing on a outdoor trail adventure",
+        "category": "Travels Together"
+      },
+      {
+        "id": "g3",
+        "url": "https://images.unsplash.com/photo-1544078751-58fee2d8a03b?auto=format&fit=crop&w=1200&q=80",
+        "caption": "You are my favorite place to be.",
+        "alt": "Intimate embrace during golden hour in vineyard",
+        "category": "Proposal"
+      },
+      {
+        "id": "g4",
+        "url": "https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=1200&q=80",
+        "caption": "Every love story is beautiful, but ours is my favorite.",
+        "alt": "Emma and James gazing at sunset",
+        "category": "Date Nights"
+      },
+      {
+        "id": "g5",
+        "url": "https://images.unsplash.com/photo-1529636798458-92182e662485?auto=format&fit=crop&w=1200&q=80",
+        "caption": "And so our forever begins...",
+        "alt": "Bride and groom holding hands surrounded by floral arch",
+        "category": "Pre-Wedding Photoshoot"
+      }
+    ],
+    "endingMessage": "Every photograph tells a story, capturing the love, laughter, and memories that have shaped our journey together."
+  },
+  "FOOTER_DATA": {
+    "names": "Emma & James",
+    "date": "19 · 09 · 2026",
+    "tagline": "Forever starts with you.",
+    "finalMessage": "Thank you for being part of our story.\nYour love, support, and presence mean the world to us.\nWe look forward to celebrating this unforgettable day together.\n\n❤️ With Love,\nEmma & James",
+    "hashtag": "#EmmaAndJamesForever",
+    "copyright": "© 2026 Emma & James · Made with ❤️ for our family and friends.",
+    "quickLinks": [
+      "Home",
+      "Our Story",
+      "Wedding Events",
+      "Gallery",
+      "Venue",
+      "Dress Code"
+    ],
+    "contactInfo": {
+      "email": "hello@ourwedding.com",
+      "phone": "+44 1234 567890"
+    },
+    "socialMedia": [
+      "Instagram",
+      "Facebook",
+      "Pinterest"
+    ]
+  },
+  "VENUE_DETAILS": {
+    "name": "The Willow Garden Estate (Grand Palace Wedding Hall)",
+    "address": "7400 St Helena Hwy (123 Wedding Avenue), Napa Valley, CA 94558",
+    "city": "Napa Valley, California",
+    "coordinates": { "lat": 38.4312, "lng": -122.3882 },
+    "googleMapsUrl": "https://maps.google.com/?q=The+Willow+Garden+Estate+Napa+Valley+California",
+    "parkingNote": "Complimentary parking is available. Valet parking will be provided upon arrival.",
+    "weatherInfo": "September in Napa Valley typically features warm, sunny days around 82°F (28°C) and pleasant evening breezes around 58°F (14°C).",
+    "arrivalTime": "Please arrive at least 30 minutes before the ceremony.",
+    "accessibility": "The venue is wheelchair accessible.",
+    "accommodation": "Nearby hotels are available for out-of-town guests."
+  }
+}

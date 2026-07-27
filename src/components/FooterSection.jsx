@@ -33,10 +33,10 @@ export const FooterSection = () => {
           </button>
         </div>
 
-        {/* Section 7 Heading */}
+        {/* Section Heading */}
         <div className="space-y-4">
           <span className="font-serif-display text-xs tracking-[0.3em] uppercase text-[#f3e5ab] block font-medium">
-            7. Footer Section
+            Forever & Always
           </span>
 
           <h2 className="font-script text-6xl sm:text-7xl text-[#f3e5ab]">
@@ -70,6 +70,50 @@ export const FooterSection = () => {
             >
               {copied ? <Check className="w-3.5 h-3.5 text-green-400" /> : <Copy className="w-3.5 h-3.5" />}
             </button>
+          </div>
+        </div>
+
+        {/* Quick Links, Contact Info & Socials */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-10 border-t border-[#3f4a39] text-left max-w-3xl mx-auto">
+          {/* Quick Links */}
+          <div className="space-y-3 text-center md:text-left">
+            <h4 className="font-serif-display text-sm tracking-widest uppercase text-[#f3e5ab] font-bold">
+              Quick Links
+            </h4>
+            <ul className="space-y-1.5 text-xs font-sans-body text-[#d8ccbc]">
+              {FOOTER_DATA.quickLinks?.map((link, idx) => (
+                <li key={idx}>
+                  <a href={`#${link.toLowerCase().replace(/\s+/g, '-')}`} className="hover:text-white transition-colors">
+                    {link}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Contact Info */}
+          <div className="space-y-3 text-center">
+            <h4 className="font-serif-display text-sm tracking-widest uppercase text-[#f3e5ab] font-bold">
+              Contact Us
+            </h4>
+            <div className="text-xs font-sans-body text-[#d8ccbc] space-y-1.5">
+              <p>Email: <a href={`mailto:${FOOTER_DATA.contactInfo?.email}`} className="hover:text-white underline">{FOOTER_DATA.contactInfo?.email}</a></p>
+              <p>Phone: {FOOTER_DATA.contactInfo?.phone}</p>
+            </div>
+          </div>
+
+          {/* Social Media */}
+          <div className="space-y-3 text-center md:text-right">
+            <h4 className="font-serif-display text-sm tracking-widest uppercase text-[#f3e5ab] font-bold">
+              Follow Us
+            </h4>
+            <div className="flex justify-center md:justify-end gap-4 text-xs font-sans-body text-[#d8ccbc]">
+              {FOOTER_DATA.socialMedia?.map((soc, idx) => (
+                <span key={idx} className="hover:text-white cursor-pointer transition-colors underline">
+                  {soc}
+                </span>
+              ))}
+            </div>
           </div>
         </div>
 

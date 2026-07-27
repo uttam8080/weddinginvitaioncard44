@@ -1,18 +1,90 @@
 @import "tailwindcss";
 
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Great+Vibes&family=Pinyon+Script&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100..900;1,100..900&display=swap');
+
 @layer utilities {
   .font-script {
-    font-family: 'Great Vibes', 'Alex Brush', cursive;
+    font-family: 'Great Vibes', 'Pinyon Script', 'Alex Brush', cursive;
   }
   .font-serif-display {
-    font-family: 'Cormorant Garamond', 'Playfair Display', serif;
+    font-family: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
   }
   .font-serif-body {
     font-family: 'Playfair Display', Georgia, serif;
   }
   .font-sans-body {
-    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    font-family: 'Poppins', 'Plus Jakarta Sans', system-ui, sans-serif;
   }
+}
+
+/* Ornate Antique Gold Picture Frame Styling */
+.ornate-gold-frame {
+  position: relative;
+  border: 18px solid #c5a059;
+  border-image: linear-gradient(135deg, #a38148 0%, #e2c07d 25%, #f7e7ce 50%, #c5a059 75%, #8a6a2d 100%) 18;
+  box-shadow: 
+    0 15px 35px rgba(0, 0, 0, 0.4), 
+    inset 0 0 10px rgba(0, 0, 0, 0.5), 
+    0 0 0 4px #8a6a2d;
+  background-color: #1a0f0d;
+}
+
+.ornate-gold-frame::after {
+  content: '';
+  position: absolute;
+  inset: -10px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  pointer-events: none;
+}
+
+/* Dark Burgundy Rose Floral Background */
+.floral-backdrop {
+  background-image: 
+    linear-gradient(rgba(44, 2, 11, 0.75), rgba(20, 1, 5, 0.9)),
+    url('https://images.unsplash.com/photo-1582750433449-649352e36477?q=80&w=1200&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* Striped RSVP Wallpaper Pattern */
+.stripes-bg {
+  background-color: #fff6f6;
+  background-image: repeating-linear-gradient(
+    90deg,
+    transparent,
+    transparent 40px,
+    rgba(224, 175, 175, 0.08) 40px,
+    rgba(224, 175, 175, 0.08) 80px
+  );
+  border: 12px double #e2cfcf;
+}
+
+/* Torn paper aesthetic */
+.torn-paper-edge {
+  position: relative;
+  background: #fbf9f4;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.torn-paper-edge::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 12px;
+  background-size: 24px 12px;
+  pointer-events: none;
+}
+
+.torn-paper-edge-top::before {
+  top: -12px;
+  background-image: radial-gradient(circle at 12px -6px, transparent 12px, #fbf9f4 13px);
+}
+
+.torn-paper-edge-bottom::before {
+  bottom: -12px;
+  background-image: radial-gradient(circle at 12px 18px, transparent 12px, #fbf9f4 13px);
 }
 
 /* Custom shimmer and gold foil effect */
@@ -56,4 +128,5 @@
 .animate-pulse-glow {
   animation: pulseGlow 3s ease-in-out infinite;
 }
+
 

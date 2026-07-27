@@ -3,46 +3,69 @@ import { motion } from 'motion/react';
 import { LOVE_STORY_DATA } from '../data/weddingData';
 import { Heart, Sparkles, Clock } from 'lucide-react';
 import { FlourishDivider, WhiteHydrangeaGarland } from './FloralDivider';
+import { OrnateFrame } from './OrnateFrame';
 
 export const LoveStorySection = () => {
   return (
     <section id="love-story" className="py-24 px-4 bg-[#f7f3ea] relative overflow-hidden">
+      {/* Soft background textures */}
+      <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[radial-gradient(#8a6a27_1px,transparent_1px)] [background-size:16px_16px]" />
+
       <div className="max-w-5xl mx-auto">
         {/* Section Header */}
-        <div className="text-center mb-12">
+        <div className="text-center mb-16">
           <span className="font-serif-display text-xs tracking-[0.25em] uppercase text-[#8a6a27] mb-2 block font-semibold">
             {LOVE_STORY_DATA.title}
           </span>
           <h2 className="font-serif-display text-4xl sm:text-5xl text-[#3d3226] font-medium">
-            4. {LOVE_STORY_DATA.mainHeading}
+            {LOVE_STORY_DATA.mainHeading}
           </h2>
           <FlourishDivider light={false} />
         </div>
 
-        {/* Narrative Paragraphs Card */}
-        <div className="max-w-3xl mx-auto text-center space-y-6 mb-20 bg-[#fbf9f4] rounded-3xl paper-shadow border border-[#e2d5c3] card-inner-border shadow-2xl relative overflow-hidden">
-          <WhiteHydrangeaGarland position="top" />
+        {/* Narrative Card & Ornate Frame Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-20">
+          {/* Left Column: Narrative paragraphs & quote */}
+          <div className="lg:col-span-7 bg-[#fffdf6] rounded-3xl paper-shadow border border-[#e2d5c3] card-inner-border p-8 sm:p-12 relative overflow-hidden space-y-6">
+            <WhiteHydrangeaGarland position="top" />
 
-          <div className="p-8 sm:p-14">
-            {LOVE_STORY_DATA.paragraphs.map((para, idx) => (
-              <p
-                key={idx}
-                className="font-serif-body text-base sm:text-lg text-[#3d3226] leading-relaxed italic mb-4"
-              >
-                {para}
+            <div className="pt-6">
+              <span className="font-sans-body text-xs tracking-widest uppercase text-[#8a6a27] font-bold block mb-4">
+                From a Timeless Romance to Forever...
+              </span>
+              <div className="space-y-4">
+                {LOVE_STORY_DATA.paragraphs.map((para, idx) => (
+                  <p
+                    key={idx}
+                    className="font-serif-body text-base sm:text-lg text-[#3d3226] leading-relaxed"
+                  >
+                    {para}
+                  </p>
+                ))}
+              </div>
+              
+              <FlourishDivider className="my-6" />
+              
+              <p className="font-script text-3xl sm:text-4xl text-[#8a6a27] pt-2 text-center font-bold">
+                "{LOVE_STORY_DATA.quote}"
               </p>
-            ))}
-            <FlourishDivider />
-            <p className="font-script text-3xl sm:text-4xl text-[#8a6a27] pt-2 font-bold">
-              "{LOVE_STORY_DATA.quote}"
-            </p>
+            </div>
+
+            <WhiteHydrangeaGarland position="bottom" />
           </div>
 
-          <WhiteHydrangeaGarland position="bottom" />
+          {/* Right Column: Ornate Gold Frame with couple image */}
+          <div className="lg:col-span-5 flex justify-center">
+            <OrnateFrame
+              src="https://images.unsplash.com/photo-1544078751-58fee2d8a03b?auto=format&fit=crop&w=800&q=80"
+              alt="Emma and James Portrait"
+              className="w-full max-w-[340px] aspect-[3/4]"
+            />
+          </div>
         </div>
 
         {/* TIMELINE SECTION */}
-        <div className="mt-20">
+        <div className="mt-24">
           <div className="text-center mb-12">
             <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#627254]/10 text-[#627254] text-xs font-sans-body uppercase tracking-widest border border-[#627254]/20 font-semibold">
               <Clock className="w-3.5 h-3.5 text-[#8a6a27]" /> The Journey
@@ -53,10 +76,8 @@ export const LoveStorySection = () => {
           </div>
 
           <div className="relative">
-            {/* Center Vertical Line */}
-            <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-0.5 bg-[#f3e5ab]/40 transform -translate-x-1/2" />
+            <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-0.5 bg-[#c5a059]/40 transform -translate-x-1/2" />
 
-            {/* Timeline Item Cards */}
             <div className="space-y-12">
               {LOVE_STORY_DATA.timeline.map((item, idx) => {
                 const isEven = idx % 2 === 0;
@@ -79,7 +100,7 @@ export const LoveStorySection = () => {
                     {/* Content Box */}
                     <div className="w-full md:w-1/2 p-2 sm:p-4">
                       <div
-                        className={`bg-[#fbf9f4] p-6 sm:p-8 rounded-3xl paper-shadow border border-[#e2d5c3] card-inner-border hover:border-[#8a6a27] transition-all shadow-xl ${
+                        className={`bg-[#fffdf6] p-6 sm:p-8 rounded-3xl paper-shadow border border-[#e2d5c3] card-inner-border hover:border-[#8a6a27] transition-all shadow-xl ${
                           isEven ? 'md:text-right' : 'md:text-left'
                         }`}
                       >

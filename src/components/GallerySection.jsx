@@ -7,6 +7,7 @@ import { FlourishDivider, WhiteHydrangeaGarland } from './FloralDivider';
 export const GallerySection = () => {
   const [selectedImgIndex, setSelectedImgIndex] = useState(null);
   const [likes, setLikes] = useState({});
+  const [activeCategory, setActiveCategory] = useState('All');
 
   const toggleLike = (id, e) => {
     e.stopPropagation();
@@ -32,7 +33,7 @@ export const GallerySection = () => {
             {GALLERY_DATA.sectionTitle}
           </span>
           <h2 className="font-serif-display text-4xl sm:text-5xl text-[#3d3226] font-medium mb-3">
-            6. {GALLERY_DATA.heading}
+            {GALLERY_DATA.heading}
           </h2>
           <p className="font-serif-body text-base sm:text-lg text-[#5c4f42] max-w-xl mx-auto italic">
             "{GALLERY_DATA.subtitle}"
@@ -40,20 +41,42 @@ export const GallerySection = () => {
           <FlourishDivider light={false} />
         </div>
 
+        {/* Category Filter Pills */}
+        {GALLERY_DATA.categories && (
+          <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-10">
+            {['All', ...GALLERY_DATA.categories].map((cat) => (
+              <button
+                key={cat}
+                onClick={() => setActiveCategory(cat)}
+                className={`px-5 py-2 rounded-full font-sans-body text-xs uppercase tracking-wider transition-all shadow-sm ${
+                  activeCategory === cat
+                    ? 'bg-[#627254] text-[#fbf9f4] font-semibold scale-105'
+                    : 'bg-[#fbf9f4] text-[#5c4f42] border border-[#e2d5c3] hover:border-[#8a6a27]'
+                }`}
+              >
+                {cat}
+              </button>
+            ))}
+          </div>
+        )}
+
         {/* CINEMATIC PHOTO GALLERY GRID */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {GALLERY_DATA.images.map((item, idx) => {
-            const isLiked = !!likes[item.id];
-            return (
-              <motion.div
-                key={item.id}
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.7, delay: idx * 0.1 }}
-                onClick={() => setSelectedImgIndex(idx)}
-                className="group relative bg-[#fbf9f4] rounded-3xl overflow-hidden paper-shadow border border-[#e2d5c3] cursor-pointer shadow-xl hover:border-[#8a6a27] transition-all"
-              >
+          {GALLERY_DATA.images
+            .filter((img) => activeCategory === 'All' || img.category === activeCategory)
+            .map((item, idx) => {
+              const isLiked = !!likes[item.id];
+              const originalIndex = GALLERY_DATA.images.findIndex((gImg) => gImg.id === item.id);
+              return (
+                <motion.div
+                  key={item.id}
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.7, delay: idx * 0.1 }}
+                  onClick={() => setSelectedImgIndex(originalIndex)}
+                  className="group relative bg-[#fbf9f4] rounded-3xl overflow-hidden paper-shadow border border-[#e2d5c3] cursor-pointer shadow-xl hover:border-[#8a6a27] transition-all"
+                >
                 {/* Photo */}
                 <div className="relative aspect-[4/5] overflow-hidden bg-[#e2d5c3]">
                   <img
