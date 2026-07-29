@@ -17,42 +17,9 @@ export const FooterSection = () => {
   };
 
   return (
-    <footer className="bg-[#2c3527] text-[#fbf9f4] pt-20 pb-12 px-4 relative overflow-hidden border-t border-[#8a9a86]/30">
-      {/* Decorative top border floral motif */}
-      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#8a9a86] via-[#f3e5ab] to-[#8a9a86]" />
+    <footer className="bg-[#2c3527] text-[#fbf9f4] pt-20 pb-12 px-4 relative overflow-hidden">
 
       <div className="max-w-4xl mx-auto text-center space-y-10 relative z-10">
-        {/* Scroll Back to Top Button */}
-        <div>
-          <button
-            onClick={scrollToTop}
-            title="Back to Top"
-            className="p-3 rounded-full bg-[#3f4a39] text-[#f3e5ab] hover:bg-[#f3e5ab] hover:text-[#2c3527] transition-all shadow-md transform hover:-translate-y-1 inline-flex items-center justify-center border border-[#8a9a86]/30"
-          >
-            <ChevronUp className="w-5 h-5" />
-          </button>
-        </div>
-
-        {/* Section Heading */}
-        <div className="space-y-4">
-          <span className="font-serif-display text-xs tracking-[0.3em] uppercase text-[#f3e5ab] block font-medium">
-            Forever & Always
-          </span>
-
-          <h2 className="font-script text-6xl sm:text-7xl text-[#f3e5ab]">
-            {FOOTER_DATA.names}
-          </h2>
-
-          <p className="font-serif-display text-xl sm:text-2xl tracking-widest text-[#e8dfd1]">
-            {FOOTER_DATA.date}
-          </p>
-
-          <p className="font-serif-body text-lg italic text-[#d8ccbc]">
-            "{FOOTER_DATA.tagline}"
-          </p>
-
-          <FlourishDivider light={true} />
-        </div>
 
         {/* Final Footer Block */}
         <div className="space-y-4">
@@ -73,49 +40,6 @@ export const FooterSection = () => {
           </div>
         </div>
 
-        {/* Quick Links, Contact Info & Socials */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-10 border-t border-[#3f4a39] text-left max-w-3xl mx-auto">
-          {/* Quick Links */}
-          <div className="space-y-3 text-center md:text-left">
-            <h4 className="font-serif-display text-sm tracking-widest uppercase text-[#f3e5ab] font-bold">
-              Quick Links
-            </h4>
-            <ul className="space-y-1.5 text-xs font-sans-body text-[#d8ccbc]">
-              {FOOTER_DATA.quickLinks?.map((link, idx) => (
-                <li key={idx}>
-                  <a href={`#${link.toLowerCase().replace(/\s+/g, '-')}`} className="hover:text-white transition-colors">
-                    {link}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Contact Info */}
-          <div className="space-y-3 text-center">
-            <h4 className="font-serif-display text-sm tracking-widest uppercase text-[#f3e5ab] font-bold">
-              Contact Us
-            </h4>
-            <div className="text-xs font-sans-body text-[#d8ccbc] space-y-1.5">
-              <p>Email: <a href={`mailto:${FOOTER_DATA.contactInfo?.email}`} className="hover:text-white underline">{FOOTER_DATA.contactInfo?.email}</a></p>
-              <p>Phone: {FOOTER_DATA.contactInfo?.phone}</p>
-            </div>
-          </div>
-
-          {/* Social Media */}
-          <div className="space-y-3 text-center md:text-right">
-            <h4 className="font-serif-display text-sm tracking-widest uppercase text-[#f3e5ab] font-bold">
-              Follow Us
-            </h4>
-            <div className="flex justify-center md:justify-end gap-4 text-xs font-sans-body text-[#d8ccbc]">
-              {FOOTER_DATA.socialMedia?.map((soc, idx) => (
-                <span key={idx} className="hover:text-white cursor-pointer transition-colors underline">
-                  {soc}
-                </span>
-              ))}
-            </div>
-          </div>
-        </div>
 
         {/* Copyright */}
         <div className="pt-8 border-t border-[#3f4a39] text-xs font-sans-body text-[#a8b8a0] tracking-wider">
