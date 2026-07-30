@@ -38,7 +38,7 @@ export const FooterSection = () => {
         <div className="pt-8 border-t border-[#3f4a39] text-xs font-sans-body text-[#a8b8a0] tracking-wider flex items-center justify-center gap-1 flex-wrap">
           <p>© 2026 Jasmine & Benjamin · Crafted By</p>
           <a 
-            href="#" 
+            href="https://tekkzy.com" 
             target="_blank" 
             rel="noopener noreferrer" 
             className="hover:text-[#d4af37] text-white underline transition-colors"
