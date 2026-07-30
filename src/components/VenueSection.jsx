@@ -1,7 +1,7 @@
 import React from 'react';
 import { VENUE_DETAILS } from '../data/weddingData';
 import { MapPin, Clock, Car, ShieldCheck, Home, Navigation } from 'lucide-react';
-import { FlourishDivider } from './FloralDivider';
+
 
 export const VenueSection = ({ onOpenModal }) => {
   if (!VENUE_DETAILS) return null;
@@ -20,7 +20,7 @@ export const VenueSection = ({ onOpenModal }) => {
           <p className="font-serif-body text-base sm:text-lg text-[#5c4f42] max-w-xl mx-auto italic">
             "We can't wait to celebrate with you at this beautiful location."
           </p>
-          <FlourishDivider light={false} className="mt-4" />
+
         </div>
 
         {/* Venue Name & Addresses Grid */}

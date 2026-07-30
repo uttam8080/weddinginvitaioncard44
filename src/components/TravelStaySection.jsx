@@ -1,27 +1,27 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { Plane, Hotel, Car } from 'lucide-react';
-import { FlourishDivider } from './FloralDivider';
+
 
 export const TravelStaySection = () => {
   return (
-    <section id="travel-stay" className="py-24 px-4 bg-[#4a0213] text-[#fbf9f4] relative overflow-hidden">
+    <section id="travel-stay" className="pt-32 sm:pt-40 lg:pt-48 pb-24 px-4 bg-[#4a0213] text-[#fbf9f4] relative overflow-hidden">
       {/* Soft background watermark */}
       <div className="absolute inset-0 opacity-[0.02] bg-[radial-gradient(#d4af37_1px,transparent_1px)] [background-size:24px_24px] pointer-events-none" />
 
       <div className="max-w-5xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
-          <span className="font-serif-display text-xs tracking-[0.25em] uppercase text-[#d4af37] mb-2 block font-medium">
+          <span className="font-serif-display text-sm sm:text-base tracking-[0.25em] uppercase text-[#d4af37] mb-2 block font-medium">
             Accommodations
           </span>
-          <h2 className="font-serif-display text-4xl sm:text-5xl text-[#fbf9f4] font-medium">
+          <h2 className="font-serif-display text-5xl sm:text-6xl lg:text-7xl text-[#fbf9f4] font-medium">
             Travel & Stay
           </h2>
-          <p className="font-serif-body text-base sm:text-lg text-[#e3d4c1] max-w-xl mx-auto italic mt-2">
+          <p className="font-serif-body text-lg sm:text-xl lg:text-2xl text-[#e3d4c1] max-w-xl mx-auto italic mt-2">
             "Plan your stay with ease"
           </p>
-          <FlourishDivider light={true} className="mt-4" />
+
         </div>
 
         {/* Content Grid */}

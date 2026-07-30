@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { HelpCircle, Mail, Phone } from 'lucide-react';
-import { FlourishDivider } from './FloralDivider';
+
 
 export const QASection = () => {
   return (
@@ -18,7 +18,7 @@ export const QASection = () => {
           <h2 className="font-serif-display text-4xl sm:text-5xl text-[#f7e7ce] font-medium">
             Questions & Answers
           </h2>
-          <FlourishDivider light={true} className="mt-4" />
+
         </div>
 
         {/* Torn Paper Card */}

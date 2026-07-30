@@ -2,7 +2,7 @@ import React from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { VENUE_DETAILS } from '../data/weddingData';
 import { X, MapPin, Navigation, Car, Sun, ExternalLink } from 'lucide-react';
-import { FlourishDivider } from './FloralDivider';
+
 
 export const LocationModal = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
@@ -33,7 +33,7 @@ export const LocationModal = ({ isOpen, onClose }) => {
             <p className="font-sans-body text-xs text-[#627254] tracking-wider uppercase mt-1 flex items-center justify-center gap-1 font-semibold">
               <MapPin className="w-3.5 h-3.5 text-[#8a6a27]" /> {VENUE_DETAILS.city}
             </p>
-            <FlourishDivider className="my-3" />
+
           </div>
 
           {/* Interactive Simulated Map Frame */}

@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import Folder from './Folder';
-import { FlourishDivider } from './FloralDivider';
+
 import { Sparkles, Heart, Camera, X } from 'lucide-react';
+import secretBgImg from '../assets/background2.png';
 
 export const ScheduleSection = () => {
   const [activeDetailCard, setActiveDetailCard] = useState(null);
@@ -60,11 +61,15 @@ export const ScheduleSection = () => {
   };
 
   return (
-    <section id="secret-gallery" className="py-24 px-4 bg-[#f7f3ea] text-[#3d3226] relative overflow-hidden">
+    <section 
+      id="secret-gallery" 
+      className="py-24 px-4 bg-[#f7f3ea] text-[#3d3226] relative overflow-hidden bg-[length:100%_100%] bg-center bg-no-repeat"
+      style={{ backgroundImage: `url(${secretBgImg})` }}
+    >
       {/* Delicate background pattern */}
       <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[radial-gradient(#8a6a27_1px,transparent_1px)] [background-size:16px_16px]" />
 
-      <div className="max-w-6xl mx-auto text-center space-y-12">
+      <div className="max-w-6xl mx-auto text-center space-y-12 relative z-10">
         {/* Header */}
         <div>
           <span className="font-serif-display text-xs tracking-[0.25em] uppercase text-[#8a6a27] mb-2 block font-semibold">
@@ -76,7 +81,7 @@ export const ScheduleSection = () => {
           <p className="font-serif-body text-base sm:text-lg text-[#5c4f42] max-w-xl mx-auto italic mt-2">
             Click each folder to unlock our hidden photo albums.
           </p>
-          <FlourishDivider light={false} className="mt-4" />
+
         </div>
 
         {/* 3 Folders Layout */}

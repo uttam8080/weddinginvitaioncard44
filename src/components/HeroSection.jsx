@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'motion/react';
 
-import marriageCeremonyImg from '../assets/marriage_ceremony.png';
+import { hero } from '../data/weddingData';
 import lanternImg from '../assets/lantern.png';
 
 export const HeroSection = () => {
@@ -14,11 +14,53 @@ export const HeroSection = () => {
         transition={{ duration: 1 }}
         className="absolute inset-0 w-full h-full"
       >
-        <img 
-          src={marriageCeremonyImg} 
-          alt="Marriage Ceremony" 
+        <video 
+          autoPlay
+          loop
+          muted
+          playsInline
           className="w-full h-full object-cover"
-        />
+        >
+          <source src="https://res.cloudinary.com/n0c7bqpd/video/upload/v1785415105/Create_a_highly_realistic_cine_online-video-cutter.com_tmhzzb.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+
+        {/* Hero Content */}
+        <div className="absolute inset-0 flex flex-col items-center justify-center text-center z-10 p-4">
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.5 }}
+            className="text-white text-lg sm:text-xl md:text-2xl font-serif tracking-widest uppercase mb-4"
+            style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.6)' }}
+          >
+            {hero.subtitle}
+          </motion.p>
+          
+          <motion.h1
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1, delay: 0.8 }}
+            className="text-[#fcfaf7] text-6xl sm:text-8xl md:text-9xl font-script tracking-wide mb-6"
+            style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.7)' }}
+          >
+            <div className="flex flex-col items-center leading-tight">
+              <span>{hero.names[0]}</span>
+              <span className="text-5xl sm:text-7xl md:text-8xl my-2 sm:my-4 text-[#d4af37]">&</span>
+              <span>{hero.names[1]}</span>
+            </div>
+          </motion.h1>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 1.1 }}
+            className="text-white text-base sm:text-lg md:text-xl font-serif tracking-wider"
+            style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.6)' }}
+          >
+            Welcome To Our Wedding Celebration
+          </motion.p>
+        </div>
         {/* Decorative Light Overlay */}
         <div className="absolute inset-0 bg-gradient-to-tr from-[#fbf9f4]/10 via-transparent to-[#f3e5ab]/40 mix-blend-overlay pointer-events-none" />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#fcfaf7]/50 pointer-events-none" />

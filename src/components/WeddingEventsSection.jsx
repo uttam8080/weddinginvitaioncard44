@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { EVENTS_DATA, DRESS_CODE_DATA } from '../data/weddingData';
+import { eventDetails, DRESS_CODE_DATA } from '../data/weddingData';
 import { MapPin, Clock, Shirt, ChevronDown, ChevronUp, Navigation, Calendar } from 'lucide-react';
-import { FlourishDivider } from './FloralDivider';
+
 
 export const WeddingEventsSection = ({ onOpenLocation }) => {
   const [activeAccordion, setActiveAccordion] = useState('ceremony');
@@ -11,53 +11,40 @@ export const WeddingEventsSection = ({ onOpenLocation }) => {
     setActiveAccordion(activeAccordion === id ? null : id);
   };
 
-  const getEventById = (id) => {
-    return EVENTS_DATA.events.find(evt => evt.id === id);
-  };
+  const dynamicAccordionItems = eventDetails.cards.map((card, index) => {
+    let icon = '✨';
+    if (card.title.toLowerCase().includes('ceremony')) icon = '💍';
+    if (card.title.toLowerCase().includes('cocktail')) icon = '🍸';
+    if (card.title.toLowerCase().includes('reception')) icon = '🍽️';
+    if (card.title.toLowerCase().includes('after')) icon = '🥂';
 
-  const ceremony = getEventById('ceremony') || EVENTS_DATA.events[0];
-  const reception = getEventById('reception') || EVENTS_DATA.events[2];
+    return {
+      id: `event-${card.id}`,
+      title: card.title,
+      icon: icon,
+      content: (
+        <div className="space-y-3 text-left">
+          {index === 0 && (
+            <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-[#d4af37]">
+              <Calendar className="w-3.5 h-3.5" /> Monday, September 21, 2026
+            </div>
+          )}
+          <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-[#d4af37]">
+            <Clock className="w-3.5 h-3.5" /> {card.time}
+          </div>
+          <div className="flex items-start gap-2 text-xs font-semibold uppercase tracking-wider text-[#d4af37]">
+            <MapPin className="w-3.5 h-3.5 mt-0.5" /> {card.subtitle}
+          </div>
+          <p className="font-serif-body text-sm text-[#e3d4c1] leading-relaxed pt-2">
+            {card.location}
+          </p>
+        </div>
+      )
+    };
+  });
 
   const accordionItems = [
-    {
-      id: 'ceremony',
-      title: 'Ceremony',
-      icon: '💍',
-      content: (
-        <div className="space-y-3 text-left">
-          <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-[#d4af37]">
-            <Calendar className="w-3.5 h-3.5" /> Saturday, September 19, 2026
-          </div>
-          <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-[#d4af37]">
-            <Clock className="w-3.5 h-3.5" /> {ceremony.time}
-          </div>
-          <div className="flex items-start gap-2 text-xs font-semibold uppercase tracking-wider text-[#d4af37]">
-            <MapPin className="w-3.5 h-3.5 mt-0.5" /> {ceremony.location}
-          </div>
-          <p className="font-serif-body text-sm text-[#e3d4c1] leading-relaxed pt-2">
-            {ceremony.description}
-          </p>
-        </div>
-      )
-    },
-    {
-      id: 'reception',
-      title: 'Reception',
-      icon: '🍽️',
-      content: (
-        <div className="space-y-3 text-left">
-          <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-[#d4af37]">
-            <Clock className="w-3.5 h-3.5" /> {reception.time}
-          </div>
-          <div className="flex items-start gap-2 text-xs font-semibold uppercase tracking-wider text-[#d4af37]">
-            <MapPin className="w-3.5 h-3.5 mt-0.5" /> {reception.location}
-          </div>
-          <p className="font-serif-body text-sm text-[#e3d4c1] leading-relaxed pt-2">
-            {reception.description}
-          </p>
-        </div>
-      )
-    },
+    ...dynamicAccordionItems,
     {
       id: 'dress-code',
       title: 'Dress Code',
@@ -95,15 +82,15 @@ export const WeddingEventsSection = ({ onOpenLocation }) => {
         {/* Header */}
         <div className="text-center mb-16">
           <span className="font-serif-display text-xs tracking-[0.25em] uppercase text-[#d4af37] mb-2 block font-medium">
-            {EVENTS_DATA.title}
+            {eventDetails.tag}
           </span>
           <h2 className="font-serif-display text-4xl sm:text-5xl text-[#fbf9f4] font-medium mb-3">
-            The Wedding
+            {eventDetails.headline}
           </h2>
           <p className="font-serif-body text-base sm:text-lg text-[#e3d4c1] max-w-xl mx-auto italic">
             "Join us as we begin our forever..."
           </p>
-          <FlourishDivider light={true} className="mt-4" />
+
         </div>
 
         {/* Content Grid */}
@@ -176,7 +163,7 @@ export const WeddingEventsSection = ({ onOpenLocation }) => {
                 className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-[#f7e7ce] text-[#2c1f1f] font-sans-body text-xs tracking-widest uppercase hover:bg-[#fffdf6] shadow-md hover:shadow-lg transition-all transform hover:scale-105 font-bold"
               >
                 <Navigation className="w-4 h-4 text-[#8a6a27]" />
-                {EVENTS_DATA.buttonText}
+                View Location
               </button>
             </div>
           </div>

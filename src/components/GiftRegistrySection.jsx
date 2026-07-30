@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { Sparkles, Gift } from 'lucide-react';
-import { FlourishDivider } from './FloralDivider';
+
 
 export const GiftRegistrySection = () => {
   return (
@@ -21,7 +21,7 @@ export const GiftRegistrySection = () => {
           <p className="font-serif-body text-base sm:text-lg text-[#e3d4c1] italic mt-2">
             "Your presence is the greatest gift of all"
           </p>
-          <FlourishDivider light={true} className="mt-4" />
+
         </div>
 
         {/* Postcard Container */}

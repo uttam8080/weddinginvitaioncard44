@@ -1,11 +1,121 @@
 {
+  "primaryColor": "#d4af37",
+  "brandName": "Benjamin & Jasmine",
+  "hero": {
+    "names": [
+      "Benjamin",
+      "Jasmine"
+    ],
+    "subtitle": "request the pleasure of your company",
+    "location": "The Willow Garden Estate • Napa Valley, California"
+  },
+  "eventDetails": {
+    "tag": "Where & When",
+    "headline": "Wedding Celebration",
+    "cards": [
+      {
+        "id": 1,
+        "imageKey": "ceremony",
+        "title": "The Ceremony",
+        "time": "4:00 PM",
+        "subtitle": "St. Mary's Church",
+        "location": "Our wedding ceremony where we exchange our vows",
+        "borderColor": "rgba(212, 175, 55, 0.4)",
+        "gradient": "linear-gradient(145deg, #fdfbfa, #f4e7e6)"
+      },
+      {
+        "id": 2,
+        "imageKey": "cocktails",
+        "title": "The Cocktail Hour",
+        "time": "5:30 PM",
+        "subtitle": "Garden Courtyard",
+        "location": "Enjoy drinks, light refreshments, and conversations",
+        "borderColor": "rgba(217, 154, 154, 0.4)",
+        "gradient": "linear-gradient(145deg, #fdfbfa, #eed4d0)"
+      },
+      {
+        "id": 3,
+        "imageKey": "reception",
+        "title": "The Reception",
+        "time": "7:00 PM",
+        "subtitle": "Grand Ballroom",
+        "location": "Dinner, speeches, dancing, and celebration",
+        "borderColor": "rgba(181, 141, 85, 0.3)",
+        "gradient": "linear-gradient(145deg, #fdfbfa, #f9efee)"
+      },
+      {
+        "id": 4,
+        "imageKey": "afterparty",
+        "title": "The After Party",
+        "time": "10:30 PM",
+        "subtitle": "Sky Lounge",
+        "location": "Continue the celebration with music and dancing",
+        "borderColor": "rgba(235, 202, 192, 0.4)",
+        "gradient": "linear-gradient(145deg, #fdfbfa, #f4e7e6)"
+      }
+    ],
+    "mapImageKey": "map",
+    "mapAlt": "Map location of The Willow Garden Estate in Napa Valley, California",
+    "mapLink": "https://maps.google.com/?q=The+Willow+Garden+Estate+Napa+Valley+California"
+  },
+  "story": {
+    "tag": "Our Love Story",
+    "headline": "Every love story is beautiful, but ours is our favorite.",
+    "subtitle": "Select a memory from our journey",
+    "chapters": [
+      {
+        "id": 1,
+        "year": "2019",
+        "chapter": "Chapter I",
+        "title": "The First Meeting",
+        "description": "It all began with a chance meeting that quickly turned into hours of conversation and countless shared smiles.",
+        "imageKey": "firstMeeting",
+        "location": "California",
+        "postmarkDate": "2019",
+        "stampIcon": ""
+      },
+      {
+        "id": 2,
+        "year": "2020",
+        "chapter": "Chapter II",
+        "title": "First Date",
+        "description": "A simple dinner turned into an unforgettable evening filled with laughter and meaningful conversations.",
+        "imageKey": "firstDate",
+        "location": "California",
+        "postmarkDate": "2020",
+        "stampIcon": ""
+      },
+      {
+        "id": 3,
+        "year": "2022",
+        "chapter": "Chapter III",
+        "title": "Adventures Together",
+        "description": "From our first vacation to favorite memories and special milestones, we discovered that life was better together.",
+        "imageKey": "travels",
+        "location": "Worldwide",
+        "postmarkDate": "2022",
+        "stampIcon": ""
+      },
+      {
+        "id": 4,
+        "year": "2024",
+        "chapter": "Chapter IV",
+        "title": "The Proposal",
+        "description": "Surrounded by nature and a breathtaking sunset, one heartfelt question changed our lives forever.",
+        "imageKey": "proposal",
+        "location": "Nature Reserve",
+        "postmarkDate": "2024",
+        "stampIcon": ""
+      }
+    ]
+  },
   "HERO_DATA": {
     "subtitleTop": "Together with their families",
-    "names": "Emma & James",
-    "groomAndBrideFull": "Emma Rose Carter & James Alexander Wilson",
+    "names": "Jasmine & Benjamin",
+    "groomAndBrideFull": "Jasmine Rose Carter & Benjamin Alexander Wilson",
     "subtitleBottom": "invite you to celebrate their wedding",
-    "dateFormatted": "Saturday, September 19, 2026",
-    "dateISO": "2026-09-19",
+    "dateFormatted": "Monday, September 21, 2026",
+    "dateISO": "2026-09-21",
     "locationName": "The Willow Garden Estate",
     "locationRegion": "Napa Valley, California",
     "tagline": "Two hearts. One love. One beautiful beginning.",
@@ -16,43 +126,43 @@
     "heading": "Scratch To Reveal Our Details",
     "items": [
       {
-        "id": "date",
-        "label": "Save The Date",
-        "mainText": "19 · 09 · 2026",
-        "subText": "Napa Valley, CA",
-        "foilLabel": "✨ SCRATCH DATE ✨",
-        "mainClass": "font-script text-3xl sm:text-4xl text-[#3d3226] py-0.5 leading-none"
+        "id": "day",
+        "label": "The Day",
+        "mainText": "21",
+        "subText": "Monday",
+        "foilLabel": "SCRATCH DAY",
+        "mainClass": "font-script text-5xl sm:text-6xl text-[#3d3226] py-0.5 leading-none"
       },
       {
-        "id": "venue",
-        "label": "The Venue",
-        "mainText": "Willow Garden",
-        "subText": "Napa Valley Estate",
-        "foilLabel": "✨ SCRATCH VENUE ✨",
-        "mainClass": "font-serif-display text-lg sm:text-xl text-[#3d3226] py-0.5 font-medium leading-tight"
+        "id": "month",
+        "label": "The Month",
+        "mainText": "SEP",
+        "subText": "September",
+        "foilLabel": "SCRATCH MONTH",
+        "mainClass": "font-serif-display text-3xl sm:text-4xl text-[#3d3226] py-0.5 font-medium leading-tight"
       },
       {
-        "id": "dress",
-        "label": "Dress Code",
-        "mainText": "Black Tie Optional",
-        "subText": "Formal & Elegant",
-        "foilLabel": "✨ SCRATCH VIBE ✨",
-        "mainClass": "font-serif-display text-base sm:text-lg text-[#3d3226] py-0.5 font-medium leading-tight"
+        "id": "year",
+        "label": "The Year",
+        "mainText": "2026",
+        "subText": "Two Thousand Twenty Six",
+        "foilLabel": "SCRATCH YEAR",
+        "mainClass": "font-serif-display text-3xl sm:text-4xl text-[#3d3226] py-0.5 font-medium leading-tight"
       }
     ]
   },
   "COUNTDOWN_DATA": {
     "sectionTitle": "Counting Down to Forever",
     "subtitle": "Our biggest adventure begins soon.",
-    "targetDate": "2026-09-19T16:00:00",
+    "targetDate": "2026-09-21T16:00:00",
     "bottomText": "We are excited to celebrate this unforgettable day with our family and friends."
   },
   "INVITATION_DATA": {
     "heading": "Together with their families",
-    "brideName": "Emma Rose Carter",
-    "groomName": "James Alexander Wilson",
+    "brideName": "Jasmine Rose Carter",
+    "groomName": "Benjamin Alexander Wilson",
     "invitationBody": "request the pleasure of your company as they exchange vows and begin their journey together.",
-    "dateText": "Saturday, the nineteenth of September",
+    "dateText": "Monday, the twenty-first of September",
     "yearText": "Two Thousand Twenty-Six",
     "timeText": "at four o'clock in the afternoon",
     "venue": "The Willow Garden Estate",
@@ -73,31 +183,31 @@
     "timeline": [
       {
         "year": "2019",
-        "title": "❤️ The First Meeting",
+        "title": "The First Meeting",
         "description": "It all began with a chance meeting that quickly turned into hours of conversation and countless shared smiles.",
         "image": "https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=800&q=80"
       },
       {
         "year": "2020",
-        "title": "☕ First Date",
+        "title": "First Date",
         "description": "A simple dinner turned into an unforgettable evening filled with laughter and meaningful conversations.",
         "image": "https://images.unsplash.com/photo-1469371670807-013ccf25f16a?auto=format&fit=crop&w=800&q=80"
       },
       {
         "year": "2022",
-        "title": "✈ Adventures Together",
+        "title": "Adventures Together",
         "description": "From our first vacation to favorite memories and special milestones, we discovered that life was better together.",
         "image": "https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?auto=format&fit=crop&w=800&q=80"
       },
       {
         "year": "2024",
-        "title": "💍 The Proposal",
+        "title": "The Proposal",
         "description": "Surrounded by nature and a breathtaking sunset, one heartfelt question changed our lives forever.",
         "image": "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=800&q=80"
       },
       {
         "year": "2026",
-        "title": "❤️ Today",
+        "title": "Today",
         "description": "Every step of our journey has led us to this beautiful day, and we can't wait to celebrate it with the people we love most.",
         "image": "https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=800&q=80"
       }
@@ -111,7 +221,7 @@
     "events": [
       {
         "id": "ceremony",
-        "icon": "💍",
+        "icon": "",
         "title": "The Ceremony",
         "time": "4:00 PM",
         "location": "St. Mary's Church / The Willow Garden Estate",
@@ -120,7 +230,7 @@
       },
       {
         "id": "cocktails",
-        "icon": "🥂",
+        "icon": "",
         "title": "The Cocktail Hour",
         "time": "5:30 PM",
         "location": "Garden Courtyard",
@@ -128,7 +238,7 @@
       },
       {
         "id": "reception",
-        "icon": "🍽️",
+        "icon": "",
         "title": "The Reception",
         "time": "7:00 PM",
         "location": "Grand Ballroom",
@@ -136,7 +246,7 @@
       },
       {
         "id": "afterparty",
-        "icon": "🌙",
+        "icon": "",
         "title": "The After Party (Optional)",
         "time": "10:30 PM",
         "location": "Sky Lounge",
@@ -144,12 +254,30 @@
       }
     ],
     "dressCodeSwatches": [
-      { "name": "Sage Green", "color": "#8a9a86" },
-      { "name": "Eucalyptus", "color": "#6b7c69" },
-      { "name": "Warm Taupe", "color": "#a89988" },
-      { "name": "Soft Champagne", "color": "#e3d4c1" },
-      { "name": "Blush Rose", "color": "#ebd2c8" },
-      { "name": "Dusty Gold", "color": "#c5a059" }
+      {
+        "name": "Sage Green",
+        "color": "#8a9a86"
+      },
+      {
+        "name": "Eucalyptus",
+        "color": "#6b7c69"
+      },
+      {
+        "name": "Warm Taupe",
+        "color": "#a89988"
+      },
+      {
+        "name": "Soft Champagne",
+        "color": "#e3d4c1"
+      },
+      {
+        "name": "Blush Rose",
+        "color": "#ebd2c8"
+      },
+      {
+        "name": "Dusty Gold",
+        "color": "#c5a059"
+      }
     ]
   },
   "DRESS_CODE_DATA": {
@@ -171,16 +299,46 @@
       "Elegant Heels or Dress Shoes"
     ],
     "preferredColors": [
-      { "name": "Champagne", "color": "#F7E7CE" },
-      { "name": "Beige", "color": "#F5F5DC" },
-      { "name": "Ivory", "color": "#FFFFF0" },
-      { "name": "Sage Green", "color": "#A3B18A" },
-      { "name": "Dusty Rose", "color": "#DCAE96" },
-      { "name": "Terracotta", "color": "#C96C4A" },
-      { "name": "Olive Green", "color": "#6B7C69" },
-      { "name": "Brown", "color": "#4B3832" },
-      { "name": "Nude", "color": "#E3D4C1" },
-      { "name": "Soft Grey", "color": "#D3D3D3" }
+      {
+        "name": "Champagne",
+        "color": "#F7E7CE"
+      },
+      {
+        "name": "Beige",
+        "color": "#F5F5DC"
+      },
+      {
+        "name": "Ivory",
+        "color": "#FFFFF0"
+      },
+      {
+        "name": "Sage Green",
+        "color": "#A3B18A"
+      },
+      {
+        "name": "Dusty Rose",
+        "color": "#DCAE96"
+      },
+      {
+        "name": "Terracotta",
+        "color": "#C96C4A"
+      },
+      {
+        "name": "Olive Green",
+        "color": "#6B7C69"
+      },
+      {
+        "name": "Brown",
+        "color": "#4B3832"
+      },
+      {
+        "name": "Nude",
+        "color": "#E3D4C1"
+      },
+      {
+        "name": "Soft Grey",
+        "color": "#D3D3D3"
+      }
     ],
     "avoidColors": [
       "Pure White",
@@ -208,14 +366,14 @@
         "id": "g1",
         "url": "https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1200&q=80",
         "caption": "The beginning of forever.",
-        "alt": "Emma and James standing together under golden sunlight",
+        "alt": "Jasmine and Benjamin standing together under golden sunlight",
         "category": "Engagement Shoot"
       },
       {
         "id": "g2",
         "url": "https://images.unsplash.com/photo-1532712938310-34cb3982ef74?auto=format&fit=crop&w=1200&q=80",
         "caption": "Adventures are better together.",
-        "alt": "Emma and James laughing on a outdoor trail adventure",
+        "alt": "Jasmine and Benjamin laughing on a outdoor trail adventure",
         "category": "Travels Together"
       },
       {
@@ -229,7 +387,7 @@
         "id": "g4",
         "url": "https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=1200&q=80",
         "caption": "Every love story is beautiful, but ours is my favorite.",
-        "alt": "Emma and James gazing at sunset",
+        "alt": "Jasmine and Benjamin gazing at sunset",
         "category": "Date Nights"
       },
       {
@@ -243,12 +401,11 @@
     "endingMessage": "Every photograph tells a story, capturing the love, laughter, and memories that have shaped our journey together."
   },
   "FOOTER_DATA": {
-    "names": "Emma & James",
-    "date": "19 · 09 · 2026",
+    "names": "Jasmine & Benjamin",
+    "date": "21 · 09 · 2026",
     "tagline": "Forever starts with you.",
-    "finalMessage": "Thank you for being part of our story.\nYour love, support, and presence mean the world to us.\nWe look forward to celebrating this unforgettable day together.\n\n❤️ With Love,\nEmma & James",
-    "hashtag": "#EmmaAndJamesForever",
-    "copyright": "© 2026 Emma & James · Made with ❤️ for our family and friends.",
+    "finalMessage": "Thank you for being part of our story.\nYour love, support, and presence mean the world to us.\nWe look forward to celebrating this unforgettable day together.\n\nWith Love,\nJasmine & Benjamin",
+    "copyright": "© 2026 Jasmine & Benjamin · Made with love for our family and friends.",
     "quickLinks": [
       "Home",
       "Our Story",
@@ -271,7 +428,10 @@
     "name": "The Willow Garden Estate (Grand Palace Wedding Hall)",
     "address": "7400 St Helena Hwy (123 Wedding Avenue), Napa Valley, CA 94558",
     "city": "Napa Valley, California",
-    "coordinates": { "lat": 38.4312, "lng": -122.3882 },
+    "coordinates": {
+      "lat": 38.4312,
+      "lng": -122.3882
+    },
     "googleMapsUrl": "https://maps.google.com/?q=The+Willow+Garden+Estate+Napa+Valley+California",
     "parkingNote": "Complimentary parking is available. Valet parking will be provided upon arrival.",
     "weatherInfo": "September in Napa Valley typically features warm, sunny days around 82°F (28°C) and pleasant evening breezes around 58°F (14°C).",

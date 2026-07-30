@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { INVITATION_DATA } from '../data/weddingData';
 import { Mail, Sparkles, X, Printer, Calendar, Send, Heart } from 'lucide-react';
-import { FlourishDivider } from './FloralDivider';
+
 import invitedCardImg from '../assets/invitedcard.png';
 
 export const InvitationCardSection = () => {
@@ -21,7 +21,7 @@ export const InvitationCardSection = () => {
         <h2 className="font-serif-display text-3xl sm:text-5xl text-[#fbf9f4] mb-4">
           You Are Cordially Invited
         </h2>
-        <FlourishDivider light={true} className="mb-8" />
+
 
         {/* CUSTOM INVITATION CARD IMAGE */}
         <motion.div

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'motion/react';
 import { Mail, Check, AlertCircle, Heart } from 'lucide-react';
-import { FlourishDivider } from './FloralDivider';
+
 import { OrnateFrame } from './OrnateFrame';
 
 export const RSVPFormSection = () => {
@@ -67,7 +67,7 @@ export const RSVPFormSection = () => {
               <p className="font-serif-body text-xs text-[#7a6b5a] mt-2 italic">
                 Please reply by September 1, 2026, so we can prepare our special day.
               </p>
-              <FlourishDivider className="mt-4" />
+
             </div>
 
             {submitted ? (

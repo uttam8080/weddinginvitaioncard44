@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { GALLERY_DATA } from '../data/weddingData';
 import { Heart, Maximize2, ChevronLeft, ChevronRight, X, Sparkles } from 'lucide-react';
-import { FlourishDivider, WhiteHydrangeaGarland } from './FloralDivider';
+import { WhiteHydrangeaGarland } from './FloralDivider';
+import galleryBgImg from '../assets/background2.png';
 
 export const GallerySection = () => {
   const [selectedImgIndex, setSelectedImgIndex] = useState(null);
@@ -25,8 +26,13 @@ export const GallerySection = () => {
   };
 
   return (
-    <section id="gallery" className="py-24 px-4 bg-[#f7f3ea] relative overflow-hidden">
-      <div className="max-w-6xl mx-auto">
+    <section 
+      id="gallery" 
+      className="py-24 px-4 bg-[#f7f3ea] relative overflow-hidden bg-[length:100%_100%] bg-center bg-no-repeat"
+      style={{ backgroundImage: `url(${galleryBgImg})` }}
+    >
+      <div className="absolute inset-0 bg-[#f7f3ea]/70 pointer-events-none" /> {/* Optional soft overlay to keep content legible */}
+      <div className="max-w-6xl mx-auto relative z-10">
         {/* Section Header */}
         <div className="text-center mb-12">
           <span className="font-serif-display text-xs tracking-[0.25em] uppercase text-[#8a6a27] mb-2 block font-semibold">
@@ -38,7 +44,7 @@ export const GallerySection = () => {
           <p className="font-serif-body text-base sm:text-lg text-[#5c4f42] max-w-xl mx-auto italic">
             "{GALLERY_DATA.subtitle}"
           </p>
-          <FlourishDivider light={false} />
+
         </div>
 
         {/* Category Filter Pills */}

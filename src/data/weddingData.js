@@ -1,5 +1,9 @@
 import weddingData from './weddingData.json';
 
+export const hero = weddingData.hero;
+export const eventDetails = weddingData.eventDetails;
+export const story = weddingData.story;
+
 export const HERO_DATA = weddingData.HERO_DATA;
 export const SCRATCH_REVEAL_DATA = weddingData.SCRATCH_REVEAL_DATA;
 export const COUNTDOWN_DATA = weddingData.COUNTDOWN_DATA;

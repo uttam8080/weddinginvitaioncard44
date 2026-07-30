@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { DRESS_CODE_DATA } from '../data/weddingData';
 import { Shirt, Sparkles, AlertCircle, CheckCircle2 } from 'lucide-react';
-import { FlourishDivider } from './FloralDivider';
+
 
 export const DressCodeSection = () => {
   if (!DRESS_CODE_DATA) return null;
@@ -21,7 +21,7 @@ export const DressCodeSection = () => {
           <p className="font-serif-body text-base sm:text-lg text-[#e3d4c1] max-w-xl mx-auto italic">
             "{DRESS_CODE_DATA.subtitle || "Help us create a beautiful celebration by following our dress code."}"
           </p>
-          <FlourishDivider light={true} className="mt-4" />
+
         </div>
 
         {/* Theme Badge */}
