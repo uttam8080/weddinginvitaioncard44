@@ -4,6 +4,7 @@ import Folder from './Folder';
 
 import { Sparkles, Heart, Camera, X } from 'lucide-react';
 import secretBgImg from '../assets/background2.png';
+import secretBgMobileImg from '../assets/backgroundi.png';
 
 export const ScheduleSection = () => {
   const [activeDetailCard, setActiveDetailCard] = useState(null);
@@ -63,39 +64,44 @@ export const ScheduleSection = () => {
   return (
     <section 
       id="secret-gallery" 
-      className="py-24 px-4 bg-[#f7f3ea] text-[#3d3226] relative overflow-hidden bg-[length:100%_100%] bg-center bg-no-repeat"
-      style={{ backgroundImage: `url(${secretBgImg})` }}
+      className="pt-32 sm:pt-36 lg:pt-44 pb-16 sm:pb-24 px-4 bg-[#f7f3ea] text-[#3d3226] relative overflow-hidden"
     >
+      {/* Mobile Background (portrait) — visible only below sm breakpoint */}
+      <div
+        className="absolute inset-0 block sm:hidden bg-cover bg-center bg-no-repeat pointer-events-none"
+        style={{ backgroundImage: `url(${secretBgMobileImg})` }}
+      />
+      {/* Desktop Background (landscape) — visible only sm and above */}
+      <div
+        className="absolute inset-0 hidden sm:block bg-[length:100%_100%] bg-center bg-no-repeat pointer-events-none"
+        style={{ backgroundImage: `url(${secretBgImg})` }}
+      />
       {/* Delicate background pattern */}
       <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[radial-gradient(#8a6a27_1px,transparent_1px)] [background-size:16px_16px]" />
 
-      <div className="max-w-6xl mx-auto text-center space-y-12 relative z-10">
+      <div className="max-w-6xl mx-auto text-center space-y-4 relative z-10">
         {/* Header */}
         <div>
-          <span className="font-serif-display text-xs tracking-[0.25em] uppercase text-[#8a6a27] mb-2 block font-semibold">
-            Gallery Archive
-          </span>
-          <h2 className="font-serif-display text-4xl sm:text-5xl text-[#3d3226] font-medium">
+          <h2 className="font-serif-display text-3xl sm:text-4xl lg:text-5xl text-[#3d3226] font-medium">
             Our Secret Memories
           </h2>
-          <p className="font-serif-body text-base sm:text-lg text-[#5c4f42] max-w-xl mx-auto italic mt-2">
-            Click each folder to unlock our hidden photo albums.
-          </p>
-
+          <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-[#d4af37]/15 text-[#8a6a27] text-xs font-sans-body uppercase tracking-widest border border-[#d4af37]/30 font-semibold mt-3">
+            Gallery Archive
+          </span>
         </div>
 
         {/* 3 Folders Layout */}
-        <div className="flex flex-col lg:flex-row items-center justify-center gap-20 lg:gap-10 py-16 min-h-[480px] max-w-5xl mx-auto">
+        <div className="flex flex-col lg:flex-row items-center justify-center gap-10 sm:gap-12 lg:gap-10 py-4 sm:py-6 lg:py-10 min-h-[280px] sm:min-h-[360px] max-w-5xl mx-auto">
           
           {/* Folder 1: Proposal */}
-          <div className="flex flex-col items-center space-y-6">
-            <span className="font-serif-display text-lg font-bold text-[#8a6a27] uppercase tracking-wider flex items-center gap-1.5">
-              <Camera className="w-4 h-4 text-[#8a6a27]" /> Secret Proposal
+          <div className="flex flex-col items-center space-y-3 sm:space-y-6">
+            <span className="font-serif-display text-base sm:text-lg font-bold text-[#8a6a27] uppercase tracking-wider flex items-center gap-1.5">
+              Secret Proposal
             </span>
-            <div className="w-[200px] h-[160px] flex items-center justify-center relative">
+            <div className="w-[160px] h-[128px] sm:w-[200px] sm:h-[160px] flex items-center justify-center relative">
               <Folder
                 color="#c5a059"
-                size={1.4}
+                size={1.1}
                 items={createFolderItems(galleryAlbums.proposal)}
                 onPaperClick={(paperIndex) => setActiveDetailCard(galleryAlbums.proposal[paperIndex])}
                 className="transition-transform duration-300"
@@ -104,14 +110,14 @@ export const ScheduleSection = () => {
           </div>
 
           {/* Folder 2: Travels */}
-          <div className="flex flex-col items-center space-y-6">
-            <span className="font-serif-display text-lg font-bold text-[#8a6a27] uppercase tracking-wider flex items-center gap-1.5">
-              <Heart className="w-4 h-4 text-[#8a6a27]" /> Travels Together
+          <div className="flex flex-col items-center space-y-3 sm:space-y-6">
+            <span className="font-serif-display text-base sm:text-lg font-bold text-[#8a6a27] uppercase tracking-wider flex items-center gap-1.5">
+              Travels Together
             </span>
-            <div className="w-[200px] h-[160px] flex items-center justify-center relative">
+            <div className="w-[160px] h-[128px] sm:w-[200px] sm:h-[160px] flex items-center justify-center relative">
               <Folder
                 color="#627254"
-                size={1.4}
+                size={1.1}
                 items={createFolderItems(galleryAlbums.travels)}
                 onPaperClick={(paperIndex) => setActiveDetailCard(galleryAlbums.travels[paperIndex])}
                 className="transition-transform duration-300"
@@ -120,14 +126,14 @@ export const ScheduleSection = () => {
           </div>
 
           {/* Folder 3: Moments */}
-          <div className="flex flex-col items-center space-y-6">
-            <span className="font-serif-display text-lg font-bold text-[#8a6a27] uppercase tracking-wider flex items-center gap-1.5">
-              <Sparkles className="w-4 h-4 text-[#8a6a27]" /> Daily Moments
+          <div className="flex flex-col items-center space-y-3 sm:space-y-6">
+            <span className="font-serif-display text-base sm:text-lg font-bold text-[#8a6a27] uppercase tracking-wider flex items-center gap-1.5">
+              Daily Moments
             </span>
-            <div className="w-[200px] h-[160px] flex items-center justify-center relative">
+            <div className="w-[160px] h-[128px] sm:w-[200px] sm:h-[160px] flex items-center justify-center relative">
               <Folder
                 color="#8a6a27"
-                size={1.4}
+                size={1.1}
                 items={createFolderItems(galleryAlbums.moments)}
                 onPaperClick={(paperIndex) => setActiveDetailCard(galleryAlbums.moments[paperIndex])}
                 className="transition-transform duration-300"

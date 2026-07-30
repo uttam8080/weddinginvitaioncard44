@@ -3,8 +3,8 @@ import confetti from 'canvas-confetti';
 import { SCRATCH_REVEAL_DATA } from '../data/weddingData';
 import { Sparkles } from 'lucide-react';
 import { FlourishDivider } from './FloralDivider';
-import scratchBgImg from '../assets/scratchimg.png';
-import transparentFlower from '../assets/flowers.png';
+import scratchBgMobileImg from '../assets/1back.png';
+import scratchBgDesktopImg from '../assets/2back.png';
 
 // Botanical Leafy Wreath SVG wrapping the gold scratch circle
 const BotanicalWreath = () => (
@@ -96,7 +96,7 @@ const ScratchCardItem = ({ item }) => {
     ctx.font = 'bold 9.5px "Plus Jakarta Sans", sans-serif';
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
-    ctx.fillText(item.foilLabel || '✨ SCRATCH FOIL ✨', centerX, centerY);
+    ctx.fillText(item.foilLabel || 'SCRATCH FOIL', centerX, centerY);
 
     setIsRevealed(false);
   }, [item.foilLabel]);
@@ -228,22 +228,29 @@ export const ScratchRevealSection = () => {
   return (
     <section 
       id="scratch-reveal" 
-      className="py-24 px-4 bg-[#fbf9f4] relative overflow-hidden bg-[length:100%_100%] bg-center bg-no-repeat"
-      style={{ backgroundImage: `url(${scratchBgImg})` }}
+      className="py-24 px-4 bg-[#fbf9f4] relative overflow-hidden"
     >
+      {/* Mobile Background (portrait) — visible only below sm breakpoint */}
+      <div
+        className="absolute inset-0 block sm:hidden bg-cover bg-center bg-no-repeat pointer-events-none"
+        style={{ backgroundImage: `url(${scratchBgMobileImg})` }}
+      />
+      {/* Desktop Background (landscape) — visible only sm and above */}
+      <div
+        className="absolute inset-0 hidden sm:block bg-[length:100%_100%] bg-center bg-no-repeat pointer-events-none"
+        style={{ backgroundImage: `url(${scratchBgDesktopImg})` }}
+      />
       <div className="absolute inset-0 bg-[#f7f3ea]/60 pointer-events-none" /> {/* Optional soft overlay to keep text legible */}
       <div className="max-w-5xl mx-auto text-center relative z-[60]">
         {/* Section Title */}
-        <div className="mb-10">
-          <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-[#627254]/10 text-[#627254] text-xs font-sans-body uppercase tracking-widest mb-3 border border-[#627254]/20 font-semibold">
-            <Sparkles className="w-3.5 h-3.5 text-[#8a6a27]" /> {SCRATCH_REVEAL_DATA.sectionTag || "Interactive Save The Date"}
-          </span>
+        <div className="mb-16">
           <h2 className="font-serif-display text-3xl sm:text-5xl text-[#3d3226] font-medium mb-4">
             {SCRATCH_REVEAL_DATA.heading || "Scratch To Reveal Our Details"}
           </h2>
-          <div className="flex justify-center w-full mt-6 mb-8">
-            <img src={transparentFlower} alt="Floral Accent" className="w-64 sm:w-80 lg:w-96 object-contain drop-shadow-md" />
-          </div>
+          <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-[#d4af37]/10 text-[#8a6a27] text-xs font-sans-body uppercase tracking-widest mt-2 mb-3 border border-[#d4af37]/30 font-semibold">
+            {SCRATCH_REVEAL_DATA.sectionTag || "Interactive Save The Date"}
+          </span>
+
         </div>
 
         {/* 3 CIRCLE SCRATCH CARDS CONTAINER */}

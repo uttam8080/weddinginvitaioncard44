@@ -38,19 +38,19 @@ export const CountdownSection = () => {
   ];
 
   return (
-    <section id="countdown" className="py-24 px-4 bg-[#f4efea] text-[#3d3226] relative overflow-hidden">
+    <section id="countdown" className="pt-28 sm:pt-32 lg:pt-36 pb-24 px-4 bg-[#f4efea] text-[#3d3226] relative overflow-hidden">
       {/* Decorative background pattern */}
       <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[radial-gradient(#8a6a27_1px,transparent_1px)] [background-size:16px_16px]" />
 
       <div className="max-w-5xl mx-auto text-center space-y-24 relative z-10">
         {/* Section Heading */}
         <div className="space-y-4">
-          <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-[#627254]/10 text-[#627254] text-xs font-sans-body uppercase tracking-widest border border-[#627254]/20 font-semibold">
-            <Clock className="w-3.5 h-3.5 text-[#8a6a27]" /> Save The Date
-          </span>
           <h2 className="font-serif-display text-4xl sm:text-5xl text-[#3d3226] font-medium tracking-wide">
             {COUNTDOWN_DATA?.sectionTitle || "Counting Down to Forever"}
           </h2>
+          <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-[#d4af37]/15 text-[#8a6a27] text-xs font-sans-body uppercase tracking-widest border border-[#d4af37]/30 font-semibold">
+            Save The Date
+          </span>
         </div>
 
         {/* Hanging Countdown Cards Area */}

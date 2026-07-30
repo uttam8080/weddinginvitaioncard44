@@ -26,12 +26,12 @@ export const HeroSection = () => {
         </video>
 
         {/* Hero Content */}
-        <div className="absolute inset-0 flex flex-col items-center justify-center text-center z-10 p-4">
+        <div className="absolute inset-0 flex flex-col items-center justify-center text-center z-10 p-4 pb-24 sm:pb-32 lg:pb-48">
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.5 }}
-            className="text-white text-lg sm:text-xl md:text-2xl font-serif tracking-widest uppercase mb-4"
+            className="text-white text-base sm:text-lg md:text-xl font-serif tracking-widest uppercase mb-2 sm:mb-4"
             style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.6)' }}
           >
             {hero.subtitle}
@@ -41,12 +41,12 @@ export const HeroSection = () => {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 0.8 }}
-            className="text-[#fcfaf7] text-6xl sm:text-8xl md:text-9xl font-script tracking-wide mb-6"
+            className="text-[#fcfaf7] text-6xl sm:text-7xl md:text-8xl font-script tracking-wide mb-4 sm:mb-6"
             style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.7)' }}
           >
-            <div className="flex flex-col items-center leading-tight">
+            <div className="flex flex-col items-center leading-none">
               <span>{hero.names[0]}</span>
-              <span className="text-5xl sm:text-7xl md:text-8xl my-2 sm:my-4 text-[#d4af37]">&</span>
+              <span className="text-4xl sm:text-5xl md:text-6xl my-1 sm:my-2 text-[#d4af37]">&</span>
               <span>{hero.names[1]}</span>
             </div>
           </motion.h1>
@@ -55,7 +55,7 @@ export const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 1.1 }}
-            className="text-white text-base sm:text-lg md:text-xl font-serif tracking-wider"
+            className="text-white text-sm sm:text-base md:text-lg font-serif tracking-wider"
             style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.6)' }}
           >
             Welcome To Our Wedding Celebration

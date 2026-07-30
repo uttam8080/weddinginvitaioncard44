@@ -13,12 +13,16 @@ import { TravelStaySection } from './components/TravelStaySection';
 import { FooterSection } from './components/FooterSection';
 import { LocationModal } from './components/LocationModal';
 import { CurvedSectionDivider } from './components/CurvedSectionDivider';
+import { IntroVideoSplash } from './components/IntroVideoSplash';
 
 export default function App() {
   const [isLocationOpen, setIsLocationOpen] = useState(false);
 
   return (
     <div className="min-h-screen bg-[#fcfaf7] text-[#332f2b] font-sans-body relative selection:bg-[#ebd2c8] selection:text-[#3a322a]">
+      {/* Intro Splash Screen */}
+      <IntroVideoSplash />
+
       {/* Main Flow Sections with Curved Section Dividers */}
       <main className="w-full overflow-hidden">
         {/* Section 1: Hero Section */}
